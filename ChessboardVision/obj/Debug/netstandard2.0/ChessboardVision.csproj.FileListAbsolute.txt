@@ -1,0 +1,16 @@
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\bin\Debug\netstandard2.0\ChessboardVision.deps.json
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\bin\Debug\netstandard2.0\ChessboardVision.dll
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\bin\Debug\netstandard2.0\ref\ChessboardVision.dll
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\bin\Debug\netstandard2.0\ChessboardVision.pdb
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.csprojAssemblyReference.cache
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\Pages\GamePage.xaml.g.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\Pages\ScorePage.xaml.g.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.AssemblyInfoInputs.cache
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.AssemblyInfo.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.csproj.CoreCompileInputs.cache
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.dll
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ref\ChessboardVision.dll
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.pdb
