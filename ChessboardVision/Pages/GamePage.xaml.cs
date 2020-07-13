@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChessboardVision.BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,6 @@ namespace ChessboardVision
     public partial class GamePage : ContentPage
     {
         private readonly bool timePressure;
-        private int gameResult;
         private Task progressBarFinish;
         private int currentScore = 0;
         private int currentLifes = 3;
@@ -45,7 +45,7 @@ namespace ChessboardVision
             if (timePressure)
             {
                 await progressBarFinish;
-                await Navigation.PushModalAsync(new ScorePage(currentScore, timePressure));
+                await Navigation.PushAsync(new ScorePage(currentScore, timePressure));
             }
 
         }
@@ -68,17 +68,41 @@ namespace ChessboardVision
 
         }
 
-        private void CheckColorInput(bool isLight)
+        private async void CheckColorInput(bool isLightPressed)
         {
-            if (Chessboard.IsColorCorrect(square.Text, isLight))
+            if (Chessboard.IsColorCorrect(square.Text, isLightPressed))
             {
                 ++currentScore;
                 score.Text = currentScore.ToString();
+                if (isLightPressed)
+                {
+                    await btnLight.ChangeBackgroundColorTo(Color.Green, 250, Easing.CubicOut);
+                    await btnLight.ChangeBackgroundColorTo(Color.White, 250, Easing.CubicOut);
 
+                }
+                else
+                {
+                    await btnDark.ChangeBackgroundColorTo(Color.Green, 250, Easing.CubicOut);
+                    await btnDark.ChangeBackgroundColorTo(Color.Black, 250, Easing.CubicOut);
+
+                }
             }
             else
+            {
                 RemoveLife();
+                if (isLightPressed)
+                {
+                    await btnLight.ChangeBackgroundColorTo(Color.Red, 250, Easing.CubicOut);
+                    await btnLight.ChangeBackgroundColorTo(Color.White, 250, Easing.CubicOut);
 
+                }
+                else
+                {
+                    await btnDark.ChangeBackgroundColorTo(Color.Red, 250, Easing.CubicOut);
+                    await btnDark.ChangeBackgroundColorTo(Color.Black, 250, Easing.CubicOut);
+
+                }
+            }
             square.Text = Chessboard.GetRandomSquare();
         }
 
@@ -86,20 +110,31 @@ namespace ChessboardVision
         {
             currentLifes--;
             if (currentLifes == 2)
+            {
+                await life3.FadeTo(0, 200);
                 life3.IsVisible = false;
-            else if(currentLifes == 1)
+            }
+            else if (currentLifes == 1)
+            {
+                await life2.FadeTo(0, 200);
                 life2.IsVisible = false;
+            }
             else
             {
-
+                await life1.FadeTo(0, 200);
                 life1.IsVisible = false;
-                await Navigation.PushModalAsync(new ScorePage(currentScore, timePressure));
+                await Navigation.PushAsync(new ScorePage(currentScore, timePressure));
             }
 
         }
 
         protected override bool OnBackButtonPressed()
         {
+            Device.BeginInvokeOnMainThread(async () => {
+                var result = await this.DisplayAlert("Alert", "Do you really want to go back to the main menu?", "Yes", "No");
+                if (result) await Navigation.PushAsync(new MainPage());
+            });
+            base.OnBackButtonPressed();
             return true;
         }
     }

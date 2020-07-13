@@ -4,14 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChessboardVision.MainPage">
+             x:Class="ChessboardVision.MainPage"
+             NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
         <Label Text="Chessboard Vision" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
     </NavigationPage.TitleView>
     <StackLayout Margin="50">
         <Image Source="chess.png" WidthRequest="200" HeightRequest="200" Margin="0,0,0,80"/>
-        <Button Text="Standard" Clicked="StandardButton_OnClicked" HeightRequest="70"></Button>
-        <Button Text="Time pressure" Clicked="TimeButton_OnClicked"  HeightRequest="70"></Button>
+        <Button Text="Standard" FontSize="Large" Clicked="StandardButton_OnClicked" HeightRequest="70"></Button>
+        <Button Text="Time pressure"  FontSize="Large" Clicked="TimeButton_OnClicked"  HeightRequest="70"></Button>
     </StackLayout>
 
 </ContentPage>

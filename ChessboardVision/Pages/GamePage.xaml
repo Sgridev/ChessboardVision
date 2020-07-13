@@ -29,8 +29,8 @@
             </FlexLayout>
         </StackLayout>
         <StackLayout Margin="20">
-        <Button Text="LIGHT" FontSize="25" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Clicked="IsLight_OnClicked"></Button>
-        <Button Text="DARK" FontSize="25"  HeightRequest="130" BackgroundColor="Black" TextColor="White" Clicked="IsDark_OnClicked"></Button>
+        <Button Text="LIGHT" FontSize="25" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Clicked="IsLight_OnClicked" x:Name="btnLight"></Button>
+            <Button Text="DARK" FontSize="25"  HeightRequest="130" BackgroundColor="Black" TextColor="White" Clicked="IsDark_OnClicked" x:Name="btnDark"></Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -4,17 +4,23 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChessboardVision.ScorePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Good Job!"></Label>
-            <Label Text="NEW BEST SCORE!" IsVisible="false" />
-            <Label Text="Your Score: " TextColor="White"/>
-            <Label x:Name="currentScore"  TextColor="Orange"></Label>
-            <Label Text="Best Score: " TextColor="White"></Label>
-            <Label x:Name="bestScore" TextColor="Orange"></Label>
-            <Button Text="Play Again"></Button>
-            <Button Text="Main Menu"></Button>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="ChessboardVision.ScorePage"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <Label Text="Chessboard Vision" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Label Text="Good Job!" TextColor="Orange" FontSize="40" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>
+        <Label Text="NEW BEST SCORE!" IsVisible="false" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Green" x:Name="newBest"/>
+        <FlexLayout JustifyContent="Center" Margin="0,80,0,0">
+        <Label Text="Your Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"/>
+        <Label x:Name="currentScore" Text="0" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+        </FlexLayout>
+        <FlexLayout JustifyContent="Center">
+        <Label Text="Best Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+        <Label x:Name="bestScore" Text="0" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+        </FlexLayout>
+        <Button Text="Play Again"  Clicked="PlayAgain_OnClicked" FontSize="Large" Margin="50,100,50,0" HeightRequest="70"></Button>
+        <Button Text="Main Menu"  Clicked="Menu_OnClicked" FontSize="Large"  Margin="50,0,50,0"  HeightRequest="70"></Button>
+    </StackLayout>
 </ContentPage>
