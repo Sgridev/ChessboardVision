@@ -20,7 +20,7 @@ namespace ChessboardVision
         {
             InitializeComponent();
             this.timePressure = timePressure;
-            savedBestScore = timePressure ? Preferences.Get("best_score_time_pressure", 0) : Preferences.Get("best_score_time_standard", 0);
+            savedBestScore = timePressure ? Preferences.Get("best_score_time_pressure", 0) : Preferences.Get("best_score_standard", 0);
             currentScore.Text = gameScore.ToString();
             if(gameScore > savedBestScore)
             {
@@ -30,6 +30,7 @@ namespace ChessboardVision
             }
             bestScore.Text = savedBestScore.ToString();
             currentScore.Text = gameScore.ToString();
+         
         }
 
         protected override bool OnBackButtonPressed()

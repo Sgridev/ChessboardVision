@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,11 +20,13 @@ namespace ChessboardVision
         public GamePage()
         {
             InitializeComponent();
+            Preferences.Set("games_played", Preferences.Get("games_played", 0) + 1);
         }
 
         public GamePage(bool timePressure)
         {
             InitializeComponent();
+            Preferences.Set("games_played", Preferences.Get("games_played", 0) + 1);
             this.timePressure = timePressure;
             
 
@@ -74,6 +76,7 @@ namespace ChessboardVision
             {
                 ++currentScore;
                 score.Text = currentScore.ToString();
+                Preferences.Set("correct_answers", Preferences.Get("correct_answers", 0) + 1);
                 if (isLightPressed)
                 {
                     await btnLight.ChangeBackgroundColorTo(Color.Green, 250, Easing.CubicOut);
@@ -90,6 +93,7 @@ namespace ChessboardVision
             else
             {
                 RemoveLife();
+                Preferences.Set("wrong_answers", Preferences.Get("wrong_answers", 0) + 1);
                 if (isLightPressed)
                 {
                     await btnLight.ChangeBackgroundColorTo(Color.Red, 250, Easing.CubicOut);
@@ -132,9 +136,8 @@ namespace ChessboardVision
         {
             Device.BeginInvokeOnMainThread(async () => {
                 var result = await this.DisplayAlert("Alert", "Do you really want to go back to the main menu?", "Yes", "No");
-                if (result) await Navigation.PushAsync(new MainPage());
+                if (result) await Navigation.PopToRootAsync();
             });
-            base.OnBackButtonPressed();
             return true;
         }
     }

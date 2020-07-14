@@ -470,3 +470,5 @@ C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Deb
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Debug\90\res\drawable\info.png
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision.Android\obj\Debug\90\res\drawable\user.png

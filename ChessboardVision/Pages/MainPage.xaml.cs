@@ -15,18 +15,30 @@ namespace ChessboardVision
     {
         public MainPage()
         {
-            InitializeComponent(); 
-       
+            InitializeComponent();
+            TapGestureRecognizer infoTap = new TapGestureRecognizer();
+            infoTap.Tapped += async (sender, e) => {
+                await Navigation.PushAsync(new InfoPage());
+            };
+            infoImage.GestureRecognizers.Add(infoTap);
+
+            TapGestureRecognizer profileTap = new TapGestureRecognizer();
+            profileTap.Tapped += async (sender, e) => {
+                await Navigation.PushAsync(new ProfilePage());
+            };
+            profileImage.GestureRecognizers.Add(profileTap);
         }
 
         private async void StandardButton_OnClicked(object sender, EventArgs e)
         {
+
             await Navigation.PushAsync(new GamePage());
         }
         private async void TimeButton_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GamePage(true));
         }
-        
+
+
     }
 }

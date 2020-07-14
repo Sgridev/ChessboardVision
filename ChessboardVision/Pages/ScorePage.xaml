@@ -7,7 +7,7 @@
              x:Class="ChessboardVision.ScorePage"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
-        <Label Text="Chessboard Vision" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+        <Label Text="Score" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
     </NavigationPage.TitleView>
     <StackLayout>
         <Label Text="Good Job!" TextColor="Orange" FontSize="40" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>

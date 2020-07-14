@@ -14,3 +14,5 @@ C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netst
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.dll
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ref\ChessboardVision.dll
 C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\ChessboardVision.pdb
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\Pages\InfoPage.xaml.g.cs
+C:\Users\Sgri\Documents\GitHub\ChessboardVision\ChessboardVision\obj\Debug\netstandard2.0\Pages\ProfilePage.xaml.g.cs

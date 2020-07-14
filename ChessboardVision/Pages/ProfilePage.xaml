@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChessboardVision.ProfilePage">
+    <NavigationPage.TitleView>
+        <Label Text="Profile" TextColor="White" FontSize="Large" HorizontalTextAlignment="Start"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="20,70,20,0">
+            <Label Text="BEST SCORES" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label Text="STANDARD: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
+                <Label  x:Name="best_score_standard" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="20,0,0,0"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label Text="TIME PRESSURE: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="best_score_time_pressure" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="20,0,0,0"></Label>
+            </StackLayout>
+            <Label Text="STATS" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>
+            <StackLayout Orientation="Horizontal"  Margin="15">
+                <Label Text="GAMES PLAYED: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center" ></Label>
+                <Label x:Name="games_played" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="20,0,0,0"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label Text="CORRECT ANSWERS: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="correct_answers" TextColor="Green" FontSize="25" FontAttributes="Bold" Margin="20,0,0,0"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <Label Text="WRONG ANSWERS: " TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="wrong_answers" TextColor="Red" FontSize="25" FontAttributes="Bold" Margin="20,0,0,0"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
