@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChessboardVision.ProfilePage">
+             x:Class="ChessboardVision.Views.ProfilePage">
     <NavigationPage.TitleView>
         <Label Text="Profile" TextColor="White" FontSize="Large" HorizontalTextAlignment="Start"></Label>
     </NavigationPage.TitleView>
@@ -13,24 +13,24 @@
             <Label Text="BEST SCORES" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
             <StackLayout Orientation="Horizontal" Margin="15,35,15,15">
                 <Label Text="STANDARD: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
-                <Label  x:Name="best_score_standard" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="{Binding BestScoreStandard}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
                 <Label Text="TIME PRESSURE: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="best_score_time_pressure" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="{Binding BestScoreTimePressure}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <Label Text="STATS" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>
             <StackLayout Orientation="Horizontal"  Margin="15,35,15,15">
                 <Label Text="GAMES PLAYED: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center" ></Label>
-                <Label x:Name="games_played" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="{Binding GamesPlayed}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
                 <Label Text="CORRECT ANSWERS: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="correct_answers" TextColor="Green" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="{Binding CorrectAnswers}" TextColor="Green" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
                 <Label Text="WRONG ANSWERS: " TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="wrong_answers" TextColor="Red" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="{Binding WrongAnswers}" TextColor="Red" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

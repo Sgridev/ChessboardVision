@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChessboardVision
+namespace ChessboardVision.Model
 {
     static class Chessboard
     {
@@ -80,7 +80,7 @@ namespace ChessboardVision
 
         public static bool IsColorCorrect(string square, bool light)
         {
-            
+
             return light ? IsSquareLight(square) : !IsSquareLight(square);
 
         }

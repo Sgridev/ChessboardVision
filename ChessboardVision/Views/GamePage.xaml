@@ -4,33 +4,33 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChessboardVision.GamePage"
+             x:Class="ChessboardVision.Views.GamePage"
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
         <AbsoluteLayout x:Name="gameBar">
             <FlexLayout Direction="Row" JustifyContent="Start" Margin="10">
             <Label FontSize="20" TextColor="White" Text="Score: "></Label>
-            <Label FontSize="20" TextColor="Orange" Text="0" x:Name="score"></Label>
+            <Label FontSize="20" TextColor="Orange" Text="{Binding ScoreText}"></Label>
         </FlexLayout>
         <FlexLayout Direction="Row" JustifyContent="End" Margin="10">
-            <Image Source="life.png" WidthRequest="30" HeightRequest="30" x:Name="life1" />
-            <Image Source="life.png" WidthRequest="30" HeightRequest="30" x:Name="life2"/>
-            <Image Source="life.png" WidthRequest="30" HeightRequest="30" x:Name="life3"/>
+            <Image Source="life.png" WidthRequest="30" HeightRequest="30" IsVisible="{Binding IsLife1Visible}" />
+            <Image Source="life.png" WidthRequest="30" HeightRequest="30" IsVisible="{Binding IsLife2Visible}" />
+            <Image Source="life.png" WidthRequest="30" HeightRequest="30" IsVisible="{Binding IsLife3Visible}" />
         </FlexLayout>
         </AbsoluteLayout>
     </NavigationPage.TitleView>
     <StackLayout>
-        <ProgressBar Progress="0" ProgressColor="Orange" x:Name="progressBar" IsVisible="false" ></ProgressBar>
+        <ProgressBar Progress="0" ProgressColor="Orange" x:Name="progressBar" IsVisible="{Binding IsProgressBarVisible}" ></ProgressBar>
         <StackLayout Margin="0,100,0,70">
             <FlexLayout Direction="Row" JustifyContent="Center" AlignContent="SpaceAround" Margin="10">
                 <Label FontSize="35" TextColor="White" Text="What color is: "></Label>
-                <Label FontSize="35" TextColor="Orange" FontAttributes="Bold" x:Name="square"></Label>
+                <Label FontSize="35" TextColor="Orange" FontAttributes="Bold" Text="{Binding SquareText}"></Label>
                 <Label FontSize="35" TextColor="White" Text="?"></Label>
             </FlexLayout>
         </StackLayout>
         <StackLayout Margin="20">
-        <Button Text="LIGHT" FontSize="25" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Clicked="IsLight_OnClicked" x:Name="btnLight"></Button>
-            <Button Text="DARK" FontSize="25"  HeightRequest="130" BackgroundColor="Black" TextColor="White" Clicked="IsDark_OnClicked" x:Name="btnDark"></Button>
+            <Button Text="LIGHT" FontSize="25" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Command="{Binding LightCommand}" IsEnabled="{Binding IsLightEnabled}" x:Name="btnLight"></Button>
+            <Button Text="DARK" FontSize="25"  HeightRequest="130" BackgroundColor="Black" TextColor="White" Command="{Binding DarkCommand}" IsEnabled="{Binding IsDarkEnabled}" x:Name="btnDark"></Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

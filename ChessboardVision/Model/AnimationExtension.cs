@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace ChessboardVision.BusinessObjects
+namespace ChessboardVision.Model
 {
     public static class AnimationExtensions
     {
@@ -18,7 +16,7 @@ namespace ChessboardVision.BusinessObjects
 
                 try
                 {
-                    Func<double, Color> transform = (t) =>
+                    Color transform(double t) =>
                       Color.FromRgba(fromColor.R + t * (newColor.R - fromColor.R),
                                      fromColor.G + t * (newColor.G - fromColor.G),
                                      fromColor.B + t * (newColor.B - fromColor.B),

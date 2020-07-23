@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\InfoPage.xaml">
+    <EmbeddedResource Update="Views\InfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\ProfilePage.xaml">
+    <EmbeddedResource Update="Views\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
