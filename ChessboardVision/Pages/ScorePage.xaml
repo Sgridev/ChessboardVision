@@ -20,7 +20,7 @@
         <Label Text="Best Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
         <Label x:Name="bestScore" Text="0" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
         </FlexLayout>
-        <Button Text="Play Again"  Clicked="PlayAgain_OnClicked" FontSize="Large" Margin="50,100,50,0" HeightRequest="70"></Button>
-        <Button Text="Main Menu"  Clicked="Menu_OnClicked" FontSize="Large"  Margin="50,0,50,0"  HeightRequest="70"></Button>
+        <Button Text="Play Again"  Clicked="PlayAgain_OnClicked" FontSize="Large" Margin="50,100,50,20" HeightRequest="70"  BorderColor="DarkCyan" BorderWidth="3" FontAttributes="Bold"></Button>
+        <Button Text="Main Menu"  Clicked="Menu_OnClicked" FontSize="Large"  Margin="50,0,50,0"  HeightRequest="70" BorderColor="DarkCyan" BorderWidth="3" FontAttributes="Bold"></Button>
     </StackLayout>
 </ContentPage>

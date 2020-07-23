@@ -11,9 +11,9 @@
     </NavigationPage.TitleView>
     <StackLayout>
     <StackLayout Margin="50,50,50,0">
-        <Image Source="chess.png" WidthRequest="200" HeightRequest="200" Margin="0,0,0,80"/>
-        <Button Text="Standard" FontSize="Large" Clicked="StandardButton_OnClicked" HeightRequest="70"></Button>
-        <Button Text="Time pressure"  FontSize="Large" Clicked="TimeButton_OnClicked"  HeightRequest="70"></Button>
+        <Image Source="chess.png" WidthRequest="200" HeightRequest="200" Margin="0,0,0,60"/>
+        <Button Text="Standard" FontSize="Large" Clicked="StandardButton_OnClicked" HeightRequest="70" BorderColor="DarkCyan" BorderWidth="3" Margin="0,0,0,20" FontAttributes="Bold"></Button>
+            <Button Text="Time pressure"  FontSize="Large" Clicked="TimeButton_OnClicked"  HeightRequest="70" BorderColor="DarkCyan" BorderWidth="3" FontAttributes="Bold"></Button>
     </StackLayout>
         <FlexLayout VerticalOptions="EndAndExpand" Margin="20">
             <Image Source="info" HorizontalOptions="Start" HeightRequest="50" Margin="0,0,20,0" x:Name="infoImage"></Image>
