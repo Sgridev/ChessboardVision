@@ -11,26 +11,26 @@
     <ContentPage.Content>
         <StackLayout Margin="20,70,20,0">
             <Label Text="BEST SCORES" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
-            <StackLayout Orientation="Horizontal" Margin="15">
-                <Label Text="STANDARD: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
-                <Label  x:Name="best_score_standard" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <StackLayout Orientation="Horizontal" Margin="15,35,15,15">
+                <Label Text="STANDARD: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                <Label  x:Name="best_score_standard" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
-                <Label Text="TIME PRESSURE: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="best_score_time_pressure" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="TIME PRESSURE: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="best_score_time_pressure" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <Label Text="STATS" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>
-            <StackLayout Orientation="Horizontal"  Margin="15">
-                <Label Text="GAMES PLAYED: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center" ></Label>
-                <Label x:Name="games_played" TextColor="White" FontSize="25" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+            <StackLayout Orientation="Horizontal"  Margin="15,35,15,15">
+                <Label Text="GAMES PLAYED: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center" ></Label>
+                <Label x:Name="games_played" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
-                <Label Text="CORRECT ANSWERS: "  TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="correct_answers" TextColor="Green" FontSize="25" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="CORRECT ANSWERS: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="correct_answers" TextColor="Green" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15">
-                <Label Text="WRONG ANSWERS: " TextColor="White" FontSize="25" HorizontalTextAlignment="Center"></Label>
-                <Label x:Name="wrong_answers" TextColor="Red" FontSize="25" FontAttributes="Bold" Margin="10,0,0,0"></Label>
+                <Label Text="WRONG ANSWERS: " TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                <Label x:Name="wrong_answers" TextColor="Red" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

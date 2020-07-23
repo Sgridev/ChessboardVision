@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace ChessboardVision
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
+   
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private bool _isRunning = false;
         public MainPage()
         {
             InitializeComponent();
@@ -31,12 +31,22 @@ namespace ChessboardVision
 
         private async void StandardButton_OnClicked(object sender, EventArgs e)
         {
-
+                if (_isRunning)
+                    return;
+                else
+                    _isRunning = true;
+          
             await Navigation.PushAsync(new GamePage());
+            _isRunning = false;
         }
         private async void TimeButton_OnClicked(object sender, EventArgs e)
         {
+            if (_isRunning)
+                return;
+            else
+                _isRunning = true;
             await Navigation.PushAsync(new GamePage(true));
+            _isRunning = false;
         }
 
 

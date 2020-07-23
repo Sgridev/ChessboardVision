@@ -10,18 +10,17 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Label Text="CHESSBOARD VISION" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+            <Label Text="CHESSBOARD VISION" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,20,0,0"></Label>
             <Label Text="This app helps you develop blindfold chess skills." TextColor="White" Margin="0,30,0,0"></Label>
-            <Label Text="Try to picture the chessboard in your mind and guess the color of the square asked." TextColor="White"></Label>
+            <Label Text="Try to picture the chessboard in your mind and guess the correct color of the square asked." TextColor="White"></Label>
             <Label Text="There are two different game modes: " TextColor="White"></Label>
-            <Label Text="Standard mode: Guess the correct square color. Every error you make costs you a life, 3 errors means game over!" TextColor="White"></Label>
-            <Label Text="Time pressure: Same as the standard mode but you have only one minute to score as much as you can!" TextColor="White"></Label>
-            <Label Text="This app is free, without ads, without in-app purchases, and open source! :)" TextColor="White"></Label>
-            <Label Text="If you desire to support me you can do it here:" TextColor="White"></Label>
-            <Image Source="coffee.png" x:Name="coffee" Margin="30"></Image>
+            <Label Text="Standard mode: Guess the color of the square. Every error you make costs you a life, 3 errors means game over!" TextColor="White"></Label>
+            <Label Text="Time pressure: All rules of standard mode applies, but you have only one minute to score as much as you can!" TextColor="White"></Label>
+            <Label Text="This app is free, without ads, without in-app purchases, and open source!" TextColor="White"></Label>
+            <Label Text="If you want to support me: share this app with your friends, get better at chess and live a good life :)" TextColor="White"></Label>
             <Label Text="Thank you for using the app," TextColor="White" HorizontalOptions="End" Margin="0,30,40,10"></Label>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,0,10,0">
-            <Image Source="sgri.jpg" x:Name="sgri" WidthRequest="60" HeightRequest="60"></Image>
+            <StackLayout Orientation="Vertical" HorizontalOptions="End" Margin="0,10,30,0">
+            <Image Source="sgri.jpg" x:Name="sgri" WidthRequest="100" HeightRequest="100"></Image>
             <Label Text="The dev-- Sgri" TextColor="White"></Label>
             </StackLayout>
         </StackLayout>

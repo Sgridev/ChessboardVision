@@ -12,23 +12,23 @@ namespace ChessboardVision
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ScorePage : ContentPage
     {
-        private readonly bool timePressure;
-        private readonly int savedBestScore;
-
+        private readonly bool _timePressure;
+        private readonly int _savedBestScore;
+        private bool _isRunning = false;
 
         public ScorePage(int gameScore, bool timePressure)
         {
             InitializeComponent();
-            this.timePressure = timePressure;
-            savedBestScore = timePressure ? Preferences.Get("best_score_time_pressure", 0) : Preferences.Get("best_score_standard", 0);
+            this._timePressure = timePressure;
+            _savedBestScore = timePressure ? Preferences.Get("best_score_time_pressure", 0) : Preferences.Get("best_score_standard", 0);
             currentScore.Text = gameScore.ToString();
-            if(gameScore > savedBestScore)
+            if(gameScore > _savedBestScore)
             {
-                savedBestScore = gameScore;
-                Preferences.Set(timePressure ? "best_score_time_pressure" : "best_score_standard", savedBestScore);
+                _savedBestScore = gameScore;
+                Preferences.Set(timePressure ? "best_score_time_pressure" : "best_score_standard", _savedBestScore);
                 newBest.IsVisible = true;
             }
-            bestScore.Text = savedBestScore.ToString();
+            bestScore.Text = _savedBestScore.ToString();
             currentScore.Text = gameScore.ToString();
          
         }
@@ -40,11 +40,21 @@ namespace ChessboardVision
 
         private async void PlayAgain_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GamePage(timePressure));
+            if (_isRunning)
+                return;
+            else
+                _isRunning = true;
+            await Navigation.PushAsync(new GamePage(_timePressure));
+            _isRunning = false;
         }
         private async void Menu_OnClicked(object sender, EventArgs e)
         {
+            if (_isRunning)
+                return;
+            else
+                _isRunning = true;
             await Navigation.PopToRootAsync();
+            _isRunning = false;
         }
     }
 }

@@ -15,11 +15,7 @@ namespace ChessboardVision
         public InfoPage()
         {
             InitializeComponent();
-            TapGestureRecognizer coffeeTap = new TapGestureRecognizer();
-            coffeeTap.Tapped += async (sender, e) => {
-                await Browser.OpenAsync("https://www.buymeacoffee.com/sgri", BrowserLaunchMode.SystemPreferred);
-            };
-            coffee.GestureRecognizers.Add(coffeeTap);
+
 
             TapGestureRecognizer sgriTap = new TapGestureRecognizer();
             sgriTap.Tapped += async (sender, e) => {

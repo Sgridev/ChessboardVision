@@ -13,10 +13,12 @@ namespace ChessboardVision
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamePage : ContentPage
     {
-        private readonly bool timePressure;
-        private Task progressBarFinish;
-        private int currentScore = 0;
-        private int currentLifes = 3;
+        private readonly bool _timePressure;
+        private Task _progressBarFinish;
+        private int _currentScore = 0;
+        private int _currentLifes = 3;
+        private bool _isRunning = false;
+        private bool _isRemovingLife = false;
         public GamePage()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace ChessboardVision
         {
             InitializeComponent();
             Preferences.Set("games_played", Preferences.Get("games_played", 0) + 1);
-            this.timePressure = timePressure;
+            this._timePressure = timePressure;
             
 
         }
@@ -35,19 +37,19 @@ namespace ChessboardVision
         protected async override void OnAppearing()
         {
 
-            if (timePressure)
+            if (_timePressure)
             {
                 progressBar.IsVisible = true;
-                progressBarFinish = WaitProgressBarAsync();
+                _progressBarFinish = WaitProgressBarAsync();
 
             }
 
             square.Text = Chessboard.GetRandomSquare();
 
-            if (timePressure)
+            if (_timePressure)
             {
-                await progressBarFinish;
-                await Navigation.PushAsync(new ScorePage(currentScore, timePressure));
+                await _progressBarFinish;
+                await Navigation.PushAsync(new ScorePage(_currentScore, _timePressure));
             }
 
         }
@@ -60,13 +62,24 @@ namespace ChessboardVision
 
         private void IsLight_OnClicked(object sender, EventArgs e)
         {
+            if (_isRunning)
+                return;
+            else
+                _isRunning = true;
             CheckColorInput(true);
-          
+            square.Text = Chessboard.GetRandomSquare();
+            _isRunning = false;
 
         }
         private void IsDark_OnClicked(object sender, EventArgs e)
         {
+            if (_isRunning)
+                return;
+            else
+                _isRunning = true;
             CheckColorInput(false);
+            square.Text = Chessboard.GetRandomSquare();
+            _isRunning = false;
 
         }
 
@@ -74,8 +87,8 @@ namespace ChessboardVision
         {
             if (Chessboard.IsColorCorrect(square.Text, isLightPressed))
             {
-                ++currentScore;
-                score.Text = currentScore.ToString();
+                ++_currentScore;
+                score.Text = _currentScore.ToString();
                 Preferences.Set("correct_answers", Preferences.Get("correct_answers", 0) + 1);
                 if (isLightPressed)
                 {
@@ -107,18 +120,22 @@ namespace ChessboardVision
 
                 }
             }
-            square.Text = Chessboard.GetRandomSquare();
+           
         }
 
         private async void RemoveLife()
         {
-            currentLifes--;
-            if (currentLifes == 2)
+            if (_isRemovingLife)
+                return;
+            else
+                _isRemovingLife = true;
+            _currentLifes--;
+            if (_currentLifes == 2)
             {
                 await life3.FadeTo(0, 200);
                 life3.IsVisible = false;
             }
-            else if (currentLifes == 1)
+            else if (_currentLifes == 1)
             {
                 await life2.FadeTo(0, 200);
                 life2.IsVisible = false;
@@ -127,9 +144,11 @@ namespace ChessboardVision
             {
                 await life1.FadeTo(0, 200);
                 life1.IsVisible = false;
-                await Navigation.PushAsync(new ScorePage(currentScore, timePressure));
+                btnLight.IsEnabled = false;
+                btnDark.IsEnabled = false;
+                await Navigation.PushAsync(new ScorePage(_currentScore, _timePressure));
             }
-
+            _isRemovingLife = false;
         }
 
         protected override bool OnBackButtonPressed()
