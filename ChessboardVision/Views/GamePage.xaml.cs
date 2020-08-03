@@ -8,13 +8,11 @@ namespace ChessboardVision.Views
 
     public partial class GamePage : ContentPage
     {
-
-
-
+        readonly GameViewModel viewModel;
         public GamePage(bool timePressure)
         {
             InitializeComponent();
-            GameViewModel viewModel = new GameViewModel(timePressure, Navigation);
+            viewModel = new GameViewModel(timePressure, Navigation);
             viewModel.PropertyChanged += OnViewModelPropertyChanged;
             BindingContext = viewModel;
         }
@@ -56,8 +54,12 @@ namespace ChessboardVision.Views
             Device.BeginInvokeOnMainThread(async () =>
             {
                 var result = await this.DisplayAlert("Alert", "Do you really want to go back to the main menu?", "Yes", "No");
-                if (result) await Navigation.PopToRootAsync();
+                if (result)
+                    if (viewModel.BackPressCommand.CanExecute(true))
+                        viewModel.BackPressCommand.Execute(true);
+                    
             });
+
             return true;
         }
     }

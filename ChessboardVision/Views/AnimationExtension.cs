@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace ChessboardVision.Model
+namespace ChessboardVision.Views
 {
     public static class AnimationExtensions
     {

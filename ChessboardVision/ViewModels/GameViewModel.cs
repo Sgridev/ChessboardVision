@@ -30,6 +30,7 @@ namespace ChessboardVision.ViewModels
 
         public ICommand LightCommand { get; }
         public ICommand DarkCommand { get; }
+        public ICommand BackPressCommand { get; }
         public string SquareText { get { return _squareText; } set { _squareText = value; OnPropertyChanged(); } }
         public string ScoreText { get { return _scoreText; } set { _scoreText = value; OnPropertyChanged(); } }
         public bool IsLife1Visible { get { return _isLife1Visible; } set { _isLife1Visible = value; OnPropertyChanged(); } }
@@ -61,6 +62,7 @@ namespace ChessboardVision.ViewModels
             Preferences.Set("games_played", Preferences.Get("games_played", 0) + 1);
             LightCommand = new Command(x => CheckAnswer(true));
             DarkCommand = new Command(x => CheckAnswer(false));
+            BackPressCommand = new Command(async () => await Navigation.PopToRootAsync());
             if (timePressure)
             {
                 IsProgressBarVisible = true;
@@ -71,7 +73,6 @@ namespace ChessboardVision.ViewModels
                 });
             }
         }
-
 
 
         private async void CheckAnswer(bool isLightPressed)

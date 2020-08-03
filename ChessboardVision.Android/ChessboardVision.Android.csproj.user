@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>HUAWEI EML-L09</SelectedDevice>
     <ProjectView>ShowAllFiles</ProjectView>
+    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
   </PropertyGroup>
 </Project>
