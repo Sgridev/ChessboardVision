@@ -9,6 +9,7 @@
     <NavigationPage.TitleView>
         <Label Text="Chessboard Vision" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
     </NavigationPage.TitleView>
+    <ScrollView>
     <StackLayout>
         <StackLayout Margin="50,50,50,0">
             <Image Source="chess.png" WidthRequest="200" HeightRequest="200" Margin="0,0,0,60"/>
@@ -28,4 +29,5 @@
             </Image>
         </FlexLayout>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

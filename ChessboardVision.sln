@@ -5,7 +5,14 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessboardVision.Android", "ChessboardVision.Android\ChessboardVision.Android.csproj", "{191FFB93-ACC0-4583-80F6-F9124B9F453D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessboardVision", "ChessboardVision\ChessboardVision.csproj", "{4BEFBA51-927D-470A-AE00-AD335B082A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessboardVision", "ChessboardVision\ChessboardVision.csproj", "{4BEFBA51-927D-470A-AE00-AD335B082A88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessboardVisionTests", "ChessboardVisionTests\ChessboardVisionTests.csproj", "{AF619044-1F0D-4C07-8181-B13DFC771F28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8002FA50-4D88-4431-8B03-7114CF10C888}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +60,18 @@ Global
 		{4BEFBA51-927D-470A-AE00-AD335B082A88}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4BEFBA51-927D-470A-AE00-AD335B082A88}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{4BEFBA51-927D-470A-AE00-AD335B082A88}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|iPhone.Build.0 = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{AF619044-1F0D-4C07-8181-B13DFC771F28}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

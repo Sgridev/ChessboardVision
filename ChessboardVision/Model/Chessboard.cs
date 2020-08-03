@@ -2,7 +2,7 @@
 
 namespace ChessboardVision.Model
 {
-    static class Chessboard
+    public static class Chessboard
     {
         enum Squares
         {
