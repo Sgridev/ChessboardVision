@@ -10,7 +10,7 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Label Text="CHESSBOARD VISION" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,20,0,0"></Label>
+            <Image Source="logovision.png" HeightRequest="70"></Image>
             <Label Text="This app helps you develop blindfold chess skills." TextColor="White" Margin="0,30,0,0"></Label>
             <Label Text="Try to picture the chessboard in your mind and guess the correct color of the square asked." TextColor="White"></Label>
             <Label Text="There are two different game modes: " TextColor="White"></Label>

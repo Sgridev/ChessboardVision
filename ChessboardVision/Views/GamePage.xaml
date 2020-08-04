@@ -29,8 +29,8 @@
             </FlexLayout>
         </StackLayout>
         <StackLayout Margin="20">
-            <Button Text="LIGHT" FontSize="25" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Command="{Binding LightCommand}" IsEnabled="{Binding IsLightEnabled}" x:Name="btnLight"></Button>
-            <Button Text="DARK" FontSize="25"  HeightRequest="130" BackgroundColor="Black" TextColor="White" Command="{Binding DarkCommand}" IsEnabled="{Binding IsDarkEnabled}" x:Name="btnDark"></Button>
+            <Button Text="LIGHT" FontSize="25" CornerRadius ="20" HeightRequest="130" Margin="0,0,0,10" BackgroundColor="White" Command="{Binding LightCommand}" IsEnabled="{Binding IsLightEnabled}" x:Name="btnLight"></Button>
+            <Button Text="DARK" FontSize="25" CornerRadius ="20" HeightRequest="130" BackgroundColor="Black" TextColor="White" Command="{Binding DarkCommand}" IsEnabled="{Binding IsDarkEnabled}" x:Name="btnDark"></Button>
         </StackLayout>
     </StackLayout>
 </ContentPage>

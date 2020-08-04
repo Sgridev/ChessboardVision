@@ -10,7 +10,7 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Margin="20,70,20,0">
-            <Label Text="BEST SCORES" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+            <Label Text="BEST SCORES" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"  FontAttributes="Bold"></Label>
             <StackLayout Orientation="Horizontal" Margin="15,35,15,15">
                 <Label Text="STANDARD: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
                 <Label Text="{Binding BestScoreStandard}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
@@ -19,7 +19,7 @@
                 <Label Text="TIME PRESSURE: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
                 <Label Text="{Binding BestScoreTimePressure}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
             </StackLayout>
-            <Label Text="STATS" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,40,0,0"></Label>
+            <Label Text="STATS" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center" Margin="0,40,0,0" FontAttributes="Bold"></Label>
             <StackLayout Orientation="Horizontal"  Margin="15,35,15,15">
                 <Label Text="GAMES PLAYED: "  TextColor="White" FontSize="20" HorizontalTextAlignment="Center" ></Label>
                 <Label Text="{Binding GamesPlayed}" TextColor="White" FontSize="20" FontAttributes="Bold" Margin="10,0,0,0"></Label>
