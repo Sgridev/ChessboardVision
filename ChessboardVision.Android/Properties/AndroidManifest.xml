@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="2.0" package="com.andreagrisafi.chessboardvision" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="28" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="3.0" package="com.andreagrisafi.chessboardvision" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="20" android:targetSdkVersion="29" />
 	<application android:label="Chessboard Vision" android:icon="@drawable/chess"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
