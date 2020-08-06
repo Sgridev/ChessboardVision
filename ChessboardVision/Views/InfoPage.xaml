@@ -8,7 +8,8 @@
     <NavigationPage.TitleView>
         <Label Text="About" TextColor="White" FontSize="Large" HorizontalTextAlignment="Start"></Label>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+        <ContentPage.Content>
+    <ScrollView>
         <StackLayout Margin="10">
             <Image Source="logovision.png" HeightRequest="70"></Image>
             <Label Text="This app helps you develop blindfold chess skills." TextColor="White" Margin="0,30,0,0"></Label>
@@ -28,5 +29,6 @@
             <Label Text="The dev-- Sgri" TextColor="White"></Label>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

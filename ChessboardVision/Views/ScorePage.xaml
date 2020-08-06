@@ -9,18 +9,20 @@
     <NavigationPage.TitleView>
         <Label Text="Score" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
     </NavigationPage.TitleView>
-    <StackLayout>
-        <Label Text="Good Job!" TextColor="Orange" FontSize="40" HorizontalTextAlignment="Center" Margin="0,40,0,0" FontAttributes="Bold"></Label>
-        <Label Text="NEW BEST SCORE!" IsVisible="{Binding IsNewBestScore}" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Green"/>
-        <FlexLayout JustifyContent="Center" Margin="0,80,0,0">
-        <Label Text="Your Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"/>
-        <Label Text="{Binding CurrentScore}" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
-        </FlexLayout>
-        <FlexLayout JustifyContent="Center">
-        <Label Text="Best Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
-        <Label Text="{Binding BestScore}" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
-        </FlexLayout>
-        <Button Text="Play Again" Command="{Binding PlayAgainCommand}" CornerRadius ="40"  BorderWidth="8" FontSize="Large" Margin="50,100,50,20" HeightRequest="70"  BorderColor="DarkCyan" FontAttributes="Bold"></Button>
-        <Button Text="Main Menu"  Command="{Binding MenuCommand}" CornerRadius ="40"  BorderWidth="8" FontSize="Large"  Margin="50,0,50,0"  HeightRequest="70" BorderColor="DarkCyan" FontAttributes="Bold"></Button>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Good Job!" TextColor="Orange" FontSize="40" HorizontalTextAlignment="Center" Margin="0,40,0,0" FontAttributes="Bold"></Label>
+            <Label Text="NEW BEST SCORE!" IsVisible="{Binding IsNewBestScore}" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Green"/>
+            <FlexLayout JustifyContent="Center" Margin="0,80,0,0">
+                <Label Text="Your Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding CurrentScore}" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="Center">
+                <Label Text="Best Score: " TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                <Label Text="{Binding BestScore}" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"></Label>
+            </FlexLayout>
+            <Button Text="Play Again" Command="{Binding PlayAgainCommand}" CornerRadius ="40"  BorderWidth="8" FontSize="Large" Margin="50,100,50,20" HeightRequest="70"  BorderColor="DarkCyan" FontAttributes="Bold"></Button>
+            <Button Text="Main Menu"  Command="{Binding MenuCommand}" CornerRadius ="40"  BorderWidth="8" FontSize="Large"  Margin="50,0,50,0"  HeightRequest="70" BorderColor="DarkCyan" FontAttributes="Bold"></Button>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

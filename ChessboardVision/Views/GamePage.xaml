@@ -19,7 +19,8 @@
         </FlexLayout>
         </AbsoluteLayout>
     </NavigationPage.TitleView>
-    <StackLayout>
+    <ScrollView>
+        <StackLayout>
         <ProgressBar Progress="0" ProgressColor="Orange" x:Name="progressBar" IsVisible="{Binding IsProgressBarVisible}" ></ProgressBar>
         <StackLayout Margin="0,100,0,70">
             <FlexLayout Direction="Row" JustifyContent="Center" AlignContent="SpaceAround" Margin="10">
@@ -33,4 +34,5 @@
             <Button Text="DARK" FontSize="25" CornerRadius ="20" HeightRequest="130" BackgroundColor="Black" TextColor="White" Command="{Binding DarkCommand}" IsEnabled="{Binding IsDarkEnabled}" x:Name="btnDark"></Button>
         </StackLayout>
     </StackLayout>
+        </ScrollView>
 </ContentPage>
